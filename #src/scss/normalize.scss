@@ -84,6 +84,7 @@ h6 {
 
 a {
     text-decoration: none;
+    color: $maincolor;
 }
 
 a:focus,
@@ -94,6 +95,9 @@ a:active {
 button {
     outline: none;
     cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: none;
 }
 
 h1 {
@@ -123,6 +127,40 @@ input {
 
 textarea {
     display: block;
+}
+
+// Global Commands
+input {
+    border: 1px solid #ededed;
+    border-radius: 100px;
+    padding: 15px 20px;
+    width: 100%;
+    display: block;
+    outline: none;
+    font-family: inherit;
+    transition: 0.3s;
+    &::placeholder {
+        color: #bfbfbf;
+        font-size: $secondsize;
+    }
+    &:focus {
+        border: 1px solid $maincolor;
+    }
+}
+
+.icon-chevron.down {
+    display: inline-block;
+    transform: rotate(90deg);
+}
+
+.icon-chevron.up {
+    display: inline-block;
+    transform: rotate(-90deg);
+}
+
+.icon-chevron.left {
+    display: inline-block;
+    transform: rotate(180deg);
 }
 
 // Global Commands

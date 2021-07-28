@@ -1,0 +1,246 @@
+.header {
+    .upper-header {
+        .upper-header__container {
+            display: flex;
+            align-items: center;
+        }
+        padding: 23px 0;
+        background-color: #fff;
+        .header-logo {
+            margin-right: 115px;
+            a img {
+                width: 205px;
+                height: 32px;
+            }
+        }
+
+        .header-info {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            gap: 100px;
+            .header-info__column {
+                display: flex;
+                align-items: center;
+                position: relative;
+                &:first-child::after {
+                    content: '';
+                    display: block;
+                    height: 100%;
+                    position: absolute;
+                    width: 1px;
+                    background-color: $linecolor;
+                    right: -50px;
+                    top: 0;
+                }
+                .icon-time {
+                    font-size: 20px;
+                }
+                .icon-phone {
+                    font-size: 20px;
+                }
+                .header-info__text {
+                    margin-left: 15px;
+                    a {
+                        font-size: 13px;
+                        color: #478c9b;
+                    }
+                    p {
+                        font-size: 13px;
+                        line-height: 18px;
+                        color: #383838;
+                    }
+                }
+            }
+        }
+
+        form.search {
+            position: relative;
+            max-width: 325px;
+            width: 100%;
+            margin-right: 45px;
+            button {
+                top: 50%;
+                right: 20px;
+                transform: translateY(-50%);
+                font-size: 24px;
+                color: #bfbfbf;
+                position: absolute;
+            }
+        }
+        .header-cart {
+            .cart-button {
+                font-size: 24px;
+                position: relative;
+                cursor: pointer;
+                .header-cart__count {
+                    position: absolute;
+                    font-size: 11px;
+                    color: #fff;
+                    background: #62c0cb;
+                    padding: 3px 6px;
+                    font-weight: 600;
+
+                    border-radius: 50%;
+                    top: -6px;
+                    right: -6px;
+                }
+            }
+        }
+    }
+
+    .under-header {
+        background-color: $maincolor;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        .under-header__container {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            .header-category {
+                height: 100%;
+                margin-right: 25px;
+                .header-category__select {
+                    background-color: #545454;
+                    height: 100%;
+                    width: 255px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0 15px;
+                    color: #fff;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+                    &.open {
+                        background-color: #7d7d7d;
+                    }
+                }
+
+                .header-category__dropdown {
+                    position: relative;
+                    z-index: 2;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity 0.3s, visibility 0.3s;
+                    &.open {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    .category-dropdown__list {
+                        background-color: #fff;
+                        width: 100%;
+                        .category-dropdown__item {
+                            border-right: 1px solid $linecolor;
+                            &:not(:last-child) {
+                                border-bottom: 1px solid $linecolor;
+                            }
+                            &.active {
+                                .category-dropdown__button {
+                                    background-color: #e5f5f6;
+                                    .category-dropdown__name {
+                                        color: $accentcolor;
+                                    }
+                                }
+                            }
+                            &:hover {
+                                .category-dropdown__button {
+                                    background-color: #e5f5f6;
+                                    .category-dropdown__name {
+                                        color: $accentcolor;
+                                    }
+                                }
+                            }
+                            .category-dropdown__button {
+                                padding: 20px 14px;
+                                display: flex;
+                                align-items: center;
+                                transition: background-color 0.3s;
+                                width: 100%;
+                                .category-dropdown__name {
+                                    transition: color 0.3s;
+                                    margin-left: 15px;
+                                    flex: 1;
+                                }
+                                .icon-chevron {
+                                    font-size: 18px;
+                                }
+                            }
+                            .category-sublist {
+                                position: absolute;
+                                right: calc(-50% + 33px);
+                                top: 0;
+                                background-color: red;
+                                opacity: 0;
+                                height: 100%;
+                                visibility: hidden;
+                                transition: opacity 0.3s, visibility 0.3s;
+                                &.active {
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                                .category-sublist__item {
+                                    a {
+                                        font-size: 14px;
+                                        transition: color 0.3s;
+                                        &:hover {
+                                            color: $accentcolor;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .navbar {
+                flex: 1;
+                height: 100%;
+
+                .navbar__list {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    .navbar__item {
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                        transition: background-color 0.3s;
+                        position: relative;
+                        &:hover {
+                            background-color: #545454;
+                            a {
+                                opacity: 1;
+                            }
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                bottom: 0;
+                                width: 100%;
+                                height: 2px;
+                                left: 0;
+                                background-color: $accentcolor;
+                            }
+                        }
+                        padding: 0 27px;
+                        a {
+                            color: #fff;
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+
+            .languages {
+                .current-language {
+                    cursor: pointer;
+                    color: #fff;
+                }
+
+                .language-dropdown {
+                    display: none;
+                }
+            }
+        }
+    }
+}
