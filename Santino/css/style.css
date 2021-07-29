@@ -1046,7 +1046,9 @@ input:focus {
 
   .mobile-header {
     display: block;
-    padding: 50px 25px 25px 25px;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 25px;
   }
 
   .mobile-header .upper__mobile-header {
@@ -1057,6 +1059,7 @@ input:focus {
         -ms-flex-align: center;
             align-items: center;
     margin-bottom: 20px;
+    padding: 0 25px;
   }
 
   .mobile-header .upper__mobile-header .burger {
@@ -1168,9 +1171,122 @@ input:focus {
     display: none;
   }
 
+  .mobile-header .mobile-navbar {
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    left: -100%;
+    padding-bottom: 35px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    overflow: scroll;
+  }
+
+  .mobile-header .mobile-navbar.active {
+    left: 0;
+  }
+
+  .mobile-header .mobile-navbar .navbar-category .navbar-category__item {
+    -webkit-transition: background-color .3s;
+    -o-transition: background-color .3s;
+    transition: background-color .3s;
+  }
+
+  .mobile-header .mobile-navbar .navbar-category .navbar-category__item.open {
+    background-color: #E5F5F6;
+  }
+
+  .mobile-header .mobile-navbar .navbar-category .navbar-category__item.open .navbar-category__button .navbar-category__name {
+    color: #62c0cb;
+  }
+
+  .mobile-header .mobile-navbar .navbar-category .navbar-category__item.open .navbar-category__button .icon-chevron.down {
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+
+  .mobile-header .mobile-navbar .navbar-category .navbar-category__item.open .navbar-category__sublist.category-sublist {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-header .mobile-navbar .navbar-category .navbar-category__item.open .navbar-category__sublist.category-sublist .category-sublist__item {
+    margin-top: 15px;
+  }
+
+  .mobile-header .mobile-navbar .navbar-category .navbar-category__item .navbar-category__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-bottom: 1px solid #D0E6E8;
+    cursor: pointer;
+    padding: 20px 25px;
+  }
+
+  .mobile-header .mobile-navbar .navbar-category .navbar-category__item .navbar-category__button img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .mobile-header .mobile-navbar .navbar-category .navbar-category__item .navbar-category__button .navbar-category__name {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin-left: 15px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .mobile-header .mobile-navbar .navbar-category .navbar-category__item .navbar-category__button .icon-chevron {
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    -o-transition: transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+    font-size: 18px;
+  }
+
+  .mobile-header .mobile-navbar .navbar-category .navbar-category__item .navbar-category__sublist.category-sublist {
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+  }
+
+  .mobile-header .mobile-navbar .navbar-category .navbar-category__item .navbar-category__sublist.category-sublist .category-sublist__item {
+    margin-top: auto;
+  }
+
+  .mobile-header .mobile-navbar .navbar-category .navbar-category__item .navbar-category__sublist.category-sublist .category-sublist__item:last-child {
+    padding-bottom: 20px;
+  }
+
+  .mobile-header .mobile-navbar .navbar-category .navbar-category__item .navbar-category__sublist.category-sublist .category-sublist__item a {
+    font-size: 14px;
+  }
+
+  .mobile-header .mobile-navbar .navbar-menu .navbar-menu__item {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .mobile-header .mobile-navbar .navbar-menu .navbar-menu__item a {
+    font-size: 14px;
+  }
+
   .mobile-header form.search {
     position: relative;
     max-width: 100%;
+    margin: 0 25px;
   }
 
   .mobile-header form.search button {
@@ -1188,7 +1304,6 @@ input:focus {
 @media (max-width: 360px) {
   .mobile-header {
     display: block;
-    padding: 50px 15px 25px 15px;
   }
 
   .mobile-header .upper__mobile-header .header-logo {
@@ -1198,7 +1313,7 @@ input:focus {
   }
 
   .mobile-header .upper__mobile-header .header-logo a img {
-    width: 120px;
+    width: 110px;
     height: auto;
   }
 }
