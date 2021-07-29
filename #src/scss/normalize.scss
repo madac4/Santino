@@ -100,67 +100,35 @@ button {
     border: none;
 }
 
-h1 {
-    font-size: 55px;
-    line-height: 70px;
-}
-
-h2 {
-    font-size: 30px;
-    line-height: 41px;
-}
-
-h3 {
-    font-size: 24px;
-    line-height: 33px;
-}
-
-p {
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 30px;
-}
-
 input {
     display: block;
+}
+
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+img {
+    border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
 }
 
 textarea {
     display: block;
-}
-
-// Global Commands
-input {
-    border: 1px solid #ededed;
-    border-radius: 100px;
-    padding: 15px 20px;
-    width: 100%;
-    display: block;
-    outline: none;
-    font-family: inherit;
-    transition: 0.3s;
-    &::placeholder {
-        color: #bfbfbf;
-        font-size: $secondsize;
-    }
-    &:focus {
-        border: 1px solid $maincolor;
-    }
-}
-
-.icon-chevron.down {
-    display: inline-block;
-    transform: rotate(90deg);
-}
-
-.icon-chevron.up {
-    display: inline-block;
-    transform: rotate(-90deg);
-}
-
-.icon-chevron.left {
-    display: inline-block;
-    transform: rotate(180deg);
 }
 
 // Global Commands

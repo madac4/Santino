@@ -1,0 +1,65 @@
+input {
+    border: 1px solid #ededed;
+    border-radius: 100px;
+    padding: 15px 20px;
+    width: 100%;
+    display: block;
+    outline: none;
+    font-family: inherit;
+    transition: 0.3s;
+    &::placeholder {
+        color: #bfbfbf;
+        font-size: $secondsize;
+    }
+    &:focus {
+        border: 1px solid $maincolor;
+    }
+}
+
+.icon-chevron.down {
+    display: inline-block;
+    transform: rotate(90deg);
+}
+
+.icon-chevron.up {
+    display: inline-block;
+    transform: rotate(-90deg);
+}
+
+.icon-chevron.left {
+    display: inline-block;
+    transform: rotate(180deg);
+}
+
+.separator {
+    width: 100%;
+    height: 1px;
+    background-color: $linecolor;
+}
+
+h1 {
+    font-size: 55px;
+    line-height: 70px;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 41px;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 33px;
+}
+
+p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.footer-title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+}

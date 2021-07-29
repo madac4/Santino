@@ -63,6 +63,4 @@ if (document.querySelector('.mobile-header')) {
             });
         }
     });
-
-
 }
