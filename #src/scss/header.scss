@@ -168,13 +168,16 @@
                             }
                             .category-sublist {
                                 position: absolute;
-                                right: calc(-50% + 33px);
                                 top: 0;
+                                right: -100%;
                                 background-color: red;
                                 opacity: 0;
                                 height: 100%;
                                 visibility: hidden;
                                 transition: opacity 0.3s, visibility 0.3s;
+                                max-width: 345px;
+                                gap: 20px 60px;
+                                padding: 20px 25px;
                                 &.active {
                                     opacity: 1;
                                     visibility: visible;
