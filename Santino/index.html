@@ -12,7 +12,7 @@
 
 <body>
 
-    <header class="header">
+    <header class="desktop-header">
     <div class="upper-header">
         <div class="container upper-header__container">
             <div class="header-logo">
@@ -53,19 +53,23 @@
     <div class="under-header">
         <div class="container under-header__container">
             <div class="header-category">
+                <div class="header-category__overlay"></div>
                 <div class="header-category__select">
                     Category
                     <span class="icon-chevron down"></span>
                 </div>
                 <div class="header-category__dropdown category-dropdown">
                     <ul class="category-dropdown__list">
-                        <li class="category-dropdown__item active">
-                            <a href="#" class="category-dropdown__button">
+                        <li class="category-dropdown__item">
+                            <div href="#" class="category-dropdown__button">
                                 <img src="img/ghiveci.svg" alt="ghiveci">
                                 <span class="category-dropdown__name">Ghivece</span>
                                 <span class="icon-chevron"></span>
-                            </a>
-                            <ul class="category-dropdown__sublist active category-sublist">
+                            </div>
+                            <ul class="category-dropdown__sublist category-sublist">
+                                <li class="category-sublist__item">
+                                    <a href="#">Ghiveci Indoor</a>
+                                </li>
                                 <li class="category-sublist__item">
                                     <a href="#">Ghiveci Indoor</a>
                                 </li>
@@ -81,11 +85,11 @@
                             </ul>
                         </li>
                         <li class="category-dropdown__item">
-                            <a href="#" class="category-dropdown__button">
+                            <div href="#" class="category-dropdown__button">
                                 <img src="img/plant.svg" alt="plant">
                                 <span class="category-dropdown__name">Gradina</span>
                                 <span class="icon-chevron"></span>
-                            </a>
+                            </div>
                             <ul class="category-dropdown__sublist category-sublist">
                                 <li class="category-sublist__item">
                                     <a href="#">Ghiveci Indoor</a>
@@ -99,46 +103,66 @@
                             </ul>
                         </li>
                         <li class="category-dropdown__item">
-                            <a href="#" class="category-dropdown__button">
+                            <div href="#" class="category-dropdown__button">
                                 <img src="img/bucket.svg" alt="bucket">
                                 <span class="category-dropdown__name">Gospodarie</span>
                                 <span class="icon-chevron"></span>
-                                <ul class="category-dropdown__sublist category-sublist">
-                                    <li class="category-sublist__item">
-                                        <a href="#">Ghiveci Indoor</a>
-                                    </li>
-                                    <li class="category-sublist__item">
-                                        <a href="#">Ghiveci Indoor</a>
-                                    </li>
-                                    <li class="category-sublist__item">
-                                        <a href="#">Ghiveci Indoor</a>
-                                    </li>
-                                    <li class="category-sublist__item">
-                                        <a href="#">Ghiveci Indoor</a>
-                                    </li>
-                                    <li class="category-sublist__item">
-                                        <a href="#">Ghiveci Indoor</a>
-                                    </li>
-                                    <li class="category-sublist__item">
-                                        <a href="#">Ghiveci Indoor</a>
-                                    </li>
-                                </ul>
-                            </a>
+                            </div>
+
+                            <ul class="category-dropdown__sublist category-sublist">
+                                <li class="category-sublist__item">
+                                    <a href="#">Ghiveci Indoor</a>
+                                </li>
+                                <li class="category-sublist__item">
+                                    <a href="#">Ghiveci Indoor</a>
+                                </li>
+                                <li class="category-sublist__item">
+                                    <a href="#">Ghiveci Indoor</a>
+                                </li>
+                                <li class="category-sublist__item">
+                                    <a href="#">Ghiveci Indoor</a>
+                                </li>
+                                <li class="category-sublist__item">
+                                    <a href="#">Ghiveci Indoor</a>
+                                </li>
+                                <li class="category-sublist__item">
+                                    <a href="#">Ghiveci Indoor</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="category-dropdown__item">
-                            <a href="#" class="category-dropdown__button">
+                            <div href="#" class="category-dropdown__button">
                                 <img src="img/dish.svg" alt="dish">
                                 <span class="category-dropdown__name">Uz casnic</span>
                                 <span class="icon-chevron"></span>
-                                <ul class="category-dropdown__sublist category-sublist">
-                                    <li class="category-sublist__item">
-                                        <a href="#">Ghiveci Indoor</a>
-                                    </li>
-                                    <li class="category-sublist__item">
-                                        <a href="#">Ghiveci Indoor</a>
-                                    </li>
-                                </ul>
-                            </a>
+                            </div>
+
+                            <ul class="category-dropdown__sublist category-sublist">
+                                <li class="category-sublist__item">
+                                    <a href="#">Ghiveci Indoor</a>
+                                </li>
+                                <li class="category-sublist__item">
+                                    <a href="#">Ghiveci Indoor</a>
+                                </li>
+                                <li class="category-sublist__item">
+                                    <a href="#">Ghiveci Indoor</a>
+                                </li>
+                                <li class="category-sublist__item">
+                                    <a href="#">Ghiveci Indoor</a>
+                                </li>
+                                <li class="category-sublist__item">
+                                    <a href="#">Ghiveci Indoor</a>
+                                </li>
+                                <li class="category-sublist__item">
+                                    <a href="#">Ghiveci Indoor</a>
+                                </li>
+                                <li class="category-sublist__item">
+                                    <a href="#">Ghiveci Indoor</a>
+                                </li>
+                                <li class="category-sublist__item">
+                                    <a href="#">Ghiveci Indoor</a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -167,16 +191,153 @@
 </header>
 
 
-<header class="header-mobile">
+<header class="mobile-header">
+    <div class="upper__mobile-header">
+        <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
+        <div class="header-logo">
+            <a href="#"><img src="img/logo.svg" alt="#"></a>
+        </div>
+
+        <div class="languages">
+            <div class="current-language">
+                EN
+                <span class="icon-chevron down"></span>
+            </div>
+            <div class="language-dropdown">
+                <a href="#">RU</a>
+                <a href="#">RO</a>
+            </div>
+        </div>
+
+        <div class="header-cart">
+            <div class="cart-button icon-bag">
+                <span class="header-cart__count">1</span>
+            </div>
+        </div>
+    </div>
+
+    <nav class="mobile-navbar">
+        <ul class="navbar-category">
+            <li class="navbar-category__item">
+                <div href="#" class="navbar-category__button">
+                    <img src="img/ghiveci.svg" alt="ghiveci">
+                    <span class="navbar-category__name">Ghivece</span>
+                    <span class="icon-chevron down"></span>
+                </div>
+                <ul class="navbar-category__sublist category-sublist">
+                    <li class="category-sublist__item">
+                        <a href="#">Ghiveci Indoor</a>
+                    </li>
+                    <li class="category-sublist__item">
+                        <a href="#">Ghiveci Indoor</a>
+                    </li>
+                    <li class="category-sublist__item">
+                        <a href="#">Ghiveci Indoor</a>
+                    </li>
+                    <li class="category-sublist__item">
+                        <a href="#">Ghiveci Indoor</a>
+                    </li>
+                    <li class="category-sublist__item">
+                        <a href="#">Ghiveci Indoor</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="navbar-category__item">
+                <div href="#" class="navbar-category__button">
+                    <img src="img/plant.svg" alt="plant">
+                    <span class="navbar-category__name">Gradina</span>
+                    <span class="icon-chevron down"></span>
+                </div>
+                <ul class="navbar-category__sublist category-sublist">
+                    <li class="category-sublist__item">
+                        <a href="#">Ghiveci Indoor</a>
+                    </li>
+                    <li class="category-sublist__item">
+                        <a href="#">Ghiveci Indoor</a>
+                    </li>
+                    <li class="category-sublist__item">
+                        <a href="#">Ghiveci Indoor</a>
+                    </li>
+                    <li class="category-sublist__item">
+                        <a href="#">Ghiveci Indoor</a>
+                    </li>
+                    <li class="category-sublist__item">
+                        <a href="#">Ghiveci Indoor</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="navbar-category__item">
+                <div class="navbar-category__button">
+                    <img src="img/bucket.svg" alt="bucket">
+                    <span class="navbar-category__name">Gospodarie</span>
+                    <span class="icon-chevron down"></span>
+                </div>
+                <ul class="navbar-category__sublist category-sublist">
+                    <li class="category-sublist__item">
+                        <a href="#">Ghiveci Indoor</a>
+                    </li>
+                    <li class="category-sublist__item">
+                        <a href="#">Ghiveci Indoor</a>
+                    </li>
+                    <li class="category-sublist__item">
+                        <a href="#">Ghiveci Indoor</a>
+                    </li>
+                    <li class="category-sublist__item">
+                        <a href="#">Ghiveci Indoor</a>
+                    </li>
+                    <li class="category-sublist__item">
+                        <a href="#">Ghiveci Indoor</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="navbar-category__item">
+                <div class="navbar-category__button">
+                    <img src="img/dish.svg" alt="dish">
+                    <span class="navbar-category__name">Uz casnic</span>
+                    <span class="icon-chevron down"></span>
+                </div>
+                <ul class="navbar-category__sublist category-sublist">
+                    <li class="category-sublist__item">
+                        <a href="#">Ghiveci Indoor</a>
+                    </li>
+                    <li class="category-sublist__item">
+                        <a href="#">Ghiveci Indoor</a>
+                    </li>
+                    <li class="category-sublist__item">
+                        <a href="#">Ghiveci Indoor</a>
+                    </li>
+                    <li class="category-sublist__item">
+                        <a href="#">Ghiveci Indoor</a>
+                    </li>
+                    <li class="category-sublist__item">
+                        <a href="#">Ghiveci Indoor</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="navbar-menu">
+            <li class="navbar-menu__item"><a href="#">About us</a></li>
+            <li class="navbar-menu__item"><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <form action="#" class="search">
+        <input type="text" name="search" id="search" placeholder="Search...">
+        <button type="submit" class="icon-search"></button>
+    </form>
 </header>
 
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> 1ec35c178d204a0eea0e0040a4d69c46a12c76ad
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
