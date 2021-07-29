@@ -103,21 +103,43 @@
 }
 
 .contact-block {
+    position: relative;
+    top: -73px;
+    left: 50%;
+    transform: translateX(-50%);
     padding-top: 50px;
-    transform: translateY(-73%);
     display: flex;
     width: 1086px;
     height: 100%;
     justify-content: center;
-    align-items: center;
     background-color: #FFFFFF;
-    .contact-block__block {
-        display: inline-block;
-        margin: 0 auto;
-        span {
+    .contact-block__item {
+        &:not(:last-child) {
+            margin-right: 166px;
+        }
+        .contact-block__block {
             display: block;
-            font-size: 27px;
-            margin-bottom: 13px;
+            width: 190px;
+            .contact-block__title {
+                margin-bottom: 14px;
+                text-align: center;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 22px;
+                color: $maincolor;
+            }
+            span {
+                text-align: center;
+                display: block;
+                font-size: 27px;
+                margin-bottom: 13px;
+            }
+            .contact-block__info {
+                text-align: center;
+                font-size: 14px;
+                line-height: 25px;
+                color: $maincolor;
+            }
         }
     }
 }

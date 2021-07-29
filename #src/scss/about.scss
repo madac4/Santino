@@ -1,0 +1,99 @@
+.about-info {
+    transform: translateY(-66%);
+    display: block;
+    margin: 0 auto;
+    margin-bottom: -172px;
+    background-color: #FFFFFF;
+    width: 890px;
+    height: 100%;
+    padding: 50px;
+    .about-info__title {
+        margin-bottom: 30px;
+        color: $maincolor;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 41px;
+    }
+    .about-info__descr {
+        color: $maincolor;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 30px;
+    }
+}
+
+.about-card {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 56px;
+    .about-card__item {
+        width: 250px;
+        &:not(:last-child) {
+            margin-right: 70px;
+        }
+        svg {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+        .about-card__title {
+            margin-bottom: 15px;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 25px;
+            color: $maincolor;
+            text-align: center;
+        }
+        .about-card__descr {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 25px;
+            color: $maincolor;
+            text-align: center;
+        }
+    }
+}
+
+.about-director {
+    position: relative;
+    height: 100%;
+    .about-director__img {
+        position: absolute;
+        left: 230px;
+        z-index: -1;
+    }
+    .about-director__descr {
+        padding: 30px 50px 117px 50px;
+        position: absolute;
+        top: 82px;
+        right: 0;
+        background-color: #FFFFFF;
+        .about-director__quote {
+            width: 580px;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 33px;
+            color: $maincolor;
+            margin-bottom: 20px;
+        }
+        .about-director__name {
+            color: #000000;
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 5px;
+        }
+        .about-director__ceo {
+            font-size: 12px;
+            line-height: 16px;
+            color: $graycolor;
+            margin-bottom: 34px;
+        }
+        .about-director__info {
+            width: 671px;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 30px;
+            color: $maincolor;
+        }
+    }
+}
