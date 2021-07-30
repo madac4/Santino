@@ -102,8 +102,10 @@ p {
 }
 
 .icon-slider-arrow.slider-arrow__next {
-    font-size: 60px;
     transform: rotate(180deg);
+    &:hover {
+        box-shadow: 0px -15px 30px rgba(0, 0, 0, 0.07);
+    }
 }
 
 .breadcrumb {
