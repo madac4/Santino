@@ -108,6 +108,7 @@ if(document.querySelector('.slider-category__body')){
                 slidesPerView: 3,
                 centeredSlides: true,
                 spaceBetween: 0,
+                freeMode: true,
             },
             640: {
                 slidesPerView: 4,
@@ -115,6 +116,8 @@ if(document.querySelector('.slider-category__body')){
             },
             767: {
                 slidesPerView: 5,
+                freeMode: false,
+
             },
             992: {
                 slidesPerView: 6,
