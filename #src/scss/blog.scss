@@ -70,3 +70,33 @@
     line-height: 25px;
     color: $accentcolor;
 }
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+    margin-bottom: 100px;
+    span {
+        &:last-child {
+            rotate: 180deg;
+        }
+    }
+    .pagination-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .pagination-list__item {
+        border-bottom: 1px solid $linecolor;
+        padding-bottom: 18px;
+        padding-left: 25px;
+        padding-right: 25px;
+        &.active {
+            border-color: $graycolor;
+        }
+    }
+    .icon-slider-arrow {
+        font-size: 45px;
+    }
+}
