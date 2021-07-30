@@ -79,13 +79,11 @@ p {
     font-size: 16px;
     line-height: 30px;
 }
-
 .footer-title {
     font-weight: 600;
     font-size: 18px;
     line-height: 25px;
 }
-
 .accent-btn {
     width: 100%;
     display: block;
@@ -100,7 +98,6 @@ p {
         background-color: lighten($color: $accentcolor, $amount: 6);
     }
 }
-
 .icon-slider-arrow.slider-arrow__next {
     font-size: 60px;
     transform: rotate(180deg);
