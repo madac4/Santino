@@ -65,7 +65,7 @@ h1 {
 }
 
 h2 {
-    font-size: 30px;
+    @include adaptiv-value('font-size', 30, 18, 1);
     line-height: 41px;
 }
 
@@ -156,10 +156,20 @@ p {
     position: relative;
     padding: 0 20px;
     padding-bottom: 20px;
-    &:hover {
-        box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.07);
-        .product-info {
-            color: $accentcolor;
+    @media (max-width: $md1+px) {
+        padding: 0 10px;
+        padding-bottom: 20px;
+    }
+    @media (max-width: $md2+px) {
+        padding: 0 20px;
+        padding-bottom: 20px;
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.07);
+            .product-info {
+                color: $accentcolor;
+            }
         }
     }
     &-labels {
@@ -200,6 +210,12 @@ p {
         &__price {
             flex: 1;
             color: #878787;
+            @media (max-width: $md1+px) {
+                font-size: 14px;
+            }
+            @media (max-width: $md2+px) {
+                font-size: 16px;
+            }
             span {
                 color: $graycolor;
                 text-decoration: line-through;
@@ -208,6 +224,12 @@ p {
                 font-size: 22px;
                 font-weight: 600;
                 color: $maincolor;
+                @media (max-width: $md1+px) {
+                    font-size: 16px;
+                }
+                @media (max-width: $md2+px) {
+                    font-size: 22px;
+                }
                 &.discount {
                     color: $orangecolor;
                 }
@@ -218,6 +240,9 @@ p {
             border: 1px solid #1eba9e;
             border-radius: 100px;
             color: #1eba9e;
+            @media (max-width: $md1+px) {
+                padding: 4px 8px;
+            }
             &.out {
                 border: 1px solid #ff5b5b;
                 color: #ff5b5b;
@@ -258,10 +283,8 @@ p {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        .product-btn {
-            max-width: 113px;
-            padding: 13px 0;
-            font-size: 14px;
+        .cart-btn {
+            display: none;
         }
         &__review {
             small {
@@ -273,7 +296,11 @@ p {
         }
     }
 }
-
+.product-btn {
+    max-width: 113px;
+    padding: 13px 0;
+    font-size: 14px;
+}
 .stars {
     display: flex;
     align-items: center;
@@ -281,7 +308,18 @@ p {
 }
 
 .main-product {
-    padding: 0 87px;
+    @include adaptiv-value('padding-right', 87, 30, 1);
+    @include adaptiv-value('padding-left', 87, 30, 1);
+    width: 100%;
+    @media (max-width: $md1+px) {
+        padding: 0 30px;
+    }
+    @media (max-width: $md2+px) {
+        height: 600px;
+    }
+    @media (max-width: 640px) {
+        height: 400px;
+    }
     a {
         display: block;
         background-color: #fff;
@@ -291,6 +329,7 @@ p {
         }
         h3 {
             margin: 15px 0;
+            @include adaptiv-value('font-size', 24, 18, 1);
         }
         p {
             b {
@@ -298,5 +337,23 @@ p {
                 color: $orangecolor;
             }
         }
+    }
+}
+
+.section__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    @media (max-width: $md3+px) {
+        &.only-title {
+            justify-content: center;
+            a {
+                display: none;
+            }
+        }
+    }
+    a {
+        color: $accentcolor;
     }
 }
