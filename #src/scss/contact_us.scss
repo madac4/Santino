@@ -59,33 +59,6 @@
             &:nth-child(5) {
                 grid-column: 2 span;
             }
-            .contact-form__input {
-                width: 100%;
-                margin-top: 7px;
-                padding: 14px 25px;
-                border-radius: 100px;
-                border: 1px solid $linecolor;
-                outline: none;
-                font-size: 16px;
-                line-height: 22px;
-                color: $maincolor;
-                &::placeholder {
-                    font-size: 16px;
-                    line-height: 22px;
-                    color: $graycolor;
-                }
-                &.textarea {
-                    resize: none;
-                    font-family: $mainfont;
-                    color: $mainfont;
-                    border-radius: 30px;
-                    &::placeholder {
-                        font-size: 16px;
-                        line-height: 22px;
-                        color: $graycolor;
-                    }
-                }
-            }
         }
         .contact-form__btn {
             display: block;
