@@ -1,3 +1,15 @@
+const video = document.querySelectorAll('.video');
+for(let i = 0; i<video.length; i++){
+    video[i].addEventListener('mouseenter', 
+    function(e){
+        video[i].play()
+    })
+    video[i].addEventListener('mouseout', 
+    function(e){
+        video[i].pause()
+    })
+} 
+
 if (document.querySelector('.header-category__select')) {
     const categorySelect = document.querySelector('.header-category__select');
     const categoryDropdown = document.querySelector('.header-category__dropdown');

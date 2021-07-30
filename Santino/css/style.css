@@ -1084,6 +1084,102 @@ input:focus {
   color: #383838;
 }
 
+.blog-post__background {
+  position: relative;
+}
+
+.blog-post__background .blog-post__main {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 636px;
+  height: 269px;
+  background-color: #FFFFFF;
+  padding: 50px 50px;
+}
+
+.blog-post__background .blog-post__main .main-post__title {
+  margin-bottom: 11px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 41px;
+  color: #000000;
+}
+
+.blog-post__background .blog-post__main .main-post__descr {
+  margin-bottom: 27px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 25px;
+  color: #717171;
+}
+
+.blog-post__background .blog-post__main .main-post__data {
+  font-size: 14px;
+  line-height: 25px;
+  color: #717171;
+  padding-right: 15px;
+  margin-right: 15px;
+  border-right: 1px solid #ededed;
+}
+
+.blog-post__background .blog-post__main .main-post__view {
+  font-size: 14px;
+  line-height: 25px;
+  color: #62c0cb;
+}
+
+.blog-posts {
+  margin-top: 107px;
+}
+
+.blog-posts .blog-post__video video {
+  max-width: 660px;
+  height: 350px;
+}
+
+.blog-posts .blog-post {
+  -webkit-transform: translate(7.5%, -30%);
+      -ms-transform: translate(7.5%, -30%);
+          transform: translate(7.5%, -30%);
+  left: 50%;
+  background-color: #FFFFFF;
+  width: 544px;
+  height: 295px;
+  padding: 40px;
+}
+
+.blog-posts .blog-post .blog-post__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 35px;
+  color: #000000;
+}
+
+.blog-posts .blog-post .blog-post__descr {
+  margin-bottom: 27px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 25px;
+  color: #717171;
+}
+
+.blog-posts .blog-post .blog-post__data {
+  font-size: 14px;
+  line-height: 25px;
+  color: #717171;
+  padding-right: 15px;
+  margin-right: 15px;
+  border-right: 1px solid #ededed;
+}
+
+.blog-posts .blog-post .blog-post__view {
+  font-size: 14px;
+  line-height: 25px;
+  color: #62c0cb;
+}
+
 @media (max-width: 1372px) {
   .container {
     max-width: 970px;

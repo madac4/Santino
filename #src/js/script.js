@@ -1,3 +1,5 @@
+@@include('video-hover.js')
+
 if (document.querySelector('.header-category__select')) {
     const categorySelect = document.querySelector('.header-category__select');
     const categoryDropdown = document.querySelector('.header-category__dropdown');
