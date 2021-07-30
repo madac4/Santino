@@ -3,22 +3,13 @@
     display: block;
     margin: 0 auto;
     margin-bottom: -172px;
-    background-color: #FFFFFF;
-    width: 890px;
+    background-color: #ffffff;
+    max-width: 890px;
+    width: 100%;
     height: 100%;
     padding: 50px;
-    .about-info__title {
+    h2 {
         margin-bottom: 30px;
-        color: $maincolor;
-        font-weight: 600;
-        font-size: 30px;
-        line-height: 41px;
-    }
-    .about-info__descr {
-        color: $maincolor;
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 30px;
     }
 }
 
@@ -26,30 +17,18 @@
     display: flex;
     justify-content: center;
     margin-bottom: 56px;
+    gap: 70px;
     .about-card__item {
-        width: 250px;
-        &:not(:last-child) {
-            margin-right: 70px;
-        }
-        svg {
-            display: block;
-            margin: 0 auto;
+        max-width: 250px;
+        text-align: center;
+        img {
             margin-bottom: 30px;
         }
-        .about-card__title {
+        h4 {
             margin-bottom: 15px;
-            font-weight: 600;
-            font-size: 18px;
-            line-height: 25px;
-            color: $maincolor;
-            text-align: center;
         }
         .about-card__descr {
-            font-weight: 300;
             font-size: 14px;
-            line-height: 25px;
-            color: $maincolor;
-            text-align: center;
         }
     }
 }
@@ -57,23 +36,23 @@
 .about-director {
     position: relative;
     height: 100%;
+    max-width: 890px;
+    margin: 0 auto;
+    margin-bottom: 100px;
     .about-director__img {
-        position: absolute;
-        left: 230px;
-        z-index: -1;
+        width: 430px;
+        height: 100%;
     }
     .about-director__descr {
-        padding: 30px 50px 117px 50px;
+        padding: 30px 0 0 50px;
+        background-color: #ffffff;
+        height: calc(100% - 55px);
         position: absolute;
-        top: 82px;
-        right: 0;
-        background-color: #FFFFFF;
-        .about-director__quote {
-            width: 580px;
-            font-weight: 600;
-            font-size: 24px;
-            line-height: 33px;
-            color: $maincolor;
+        bottom: 0;
+        right: -180px;
+        max-width: 670px;
+        width: 100%;
+        h3 {
             margin-bottom: 20px;
         }
         .about-director__name {
@@ -82,18 +61,14 @@
             line-height: 22px;
             margin-bottom: 5px;
         }
-        .about-director__ceo {
+        .about-director__position {
+            display: block;
             font-size: 12px;
-            line-height: 16px;
             color: $graycolor;
             margin-bottom: 34px;
         }
-        .about-director__info {
-            width: 671px;
-            font-weight: 300;
-            font-size: 16px;
-            line-height: 30px;
-            color: $maincolor;
+        p {
+            width: 100%;
         }
     }
 }
