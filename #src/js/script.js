@@ -1,10 +1,11 @@
-@@include('video-hover.js')
+@@include('video-hover.js');
+@@include('slider.js');
 
 if (document.querySelector('.header-category__select')) {
     const categorySelect = document.querySelector('.header-category__select');
     const categoryDropdown = document.querySelector('.header-category__dropdown');
     const categoryItems = categoryDropdown.querySelectorAll('.category-dropdown__item');
-    const overlay = document.querySelector('.header-category__overlay');
+    const overlay = document.querySelector('.overlay');
 
     categorySelect.addEventListener('click', () => {
         categorySelect.classList.toggle('open');

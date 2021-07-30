@@ -97,17 +97,8 @@
             .header-category {
                 height: 100%;
                 margin-right: 25px;
-                .header-category__overlay {
-                    background-color: rgba(0, 0, 0, 0.15);
-                    position: absolute;
-                    inset: 0;
-                    opacity: 0;
-                    visibility: hidden;
-                    &.open {
-                        opacity: 1;
-                        visibility: visible;
-                    }
-                }
+                position: relative;
+                z-index: 101;
                 .header-category__select {
                     background-color: #545454;
                     height: 100%;
@@ -264,4 +255,17 @@
 
 .mobile-header {
     display: none;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.15);
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    z-index: 100;
+    visibility: hidden;
+    &.open {
+        opacity: 1;
+        visibility: visible;
+    }
 }
