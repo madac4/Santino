@@ -155,3 +155,33 @@
         }
     }
 }
+
+.product-section {
+    margin-bottom: 100px;
+    &.sale {
+        .main-product {
+            order: 2;
+        }
+    }
+    .product-section__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        a {
+            color: $accentcolor;
+        }
+    }
+    .product-section__body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        padding-bottom: 100px;
+        border-bottom: 1px solid $linecolor;
+        .product-body__grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+        }
+    }
+}
