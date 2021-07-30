@@ -451,6 +451,61 @@ p {
   line-height: 25px;
 }
 
+.accent-btn {
+  width: 100%;
+  display: block;
+  background-color: #62c0cb;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 100px;
+  padding: 16px 0;
+  -webkit-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.accent-btn:hover {
+  background-color: #79c9d3;
+}
+
+.icon-slider-arrow.slider-arrow__next {
+  font-size: 60px;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.breadcrumb {
+  padding-bottom: 35px;
+  padding-top: 50px;
+}
+
+.breadcrumb .breadcrumb-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.breadcrumb .breadcrumb-list .breadcrumb-list__item {
+  margin-right: 10px;
+}
+
+.breadcrumb .breadcrumb-list .breadcrumb-list__item:not(:last-child) {
+  border-right: 1px solid #ededed;
+}
+
+.breadcrumb .breadcrumb-list .breadcrumb-list__item:first-child .breadcrumb-list__link {
+  color: #717171;
+}
+
+.breadcrumb .breadcrumb-list .breadcrumb-list__item .breadcrumb-list__link {
+  color: #383838;
+  margin-right: 10px;
+  font-size: 14px;
+  line-height: 16.94px;
+}
+
 .desktop-header .upper-header {
   padding: 23px 0;
   background-color: #fff;
@@ -1170,11 +1225,11 @@ p {
   color: #383838;
 }
 
-.blog-post__background {
+.blog-article__background {
   position: relative;
 }
 
-.blog-post__background .blog-post__main {
+.blog-article__background .blog-article__main {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -1184,23 +1239,23 @@ p {
   padding: 50px 50px;
 }
 
-.blog-posts {
+.blog-articles {
   margin-top: 57px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
 }
 
-.blog-posts .blog-post {
+.blog-articles .blog-article {
   margin-top: 107px;
 }
 
-.blog-posts .blog-post .blog-post__video .video {
+.blog-articles .blog-article .blog-article__video .video {
   max-width: 660px;
   height: 350px;
 }
 
-.blog-posts .blog-post .post {
+.blog-articles .blog-article .article {
   -webkit-transform: translate(7.5%, -30%);
       -ms-transform: translate(7.5%, -30%);
           transform: translate(7.5%, -30%);
@@ -1212,7 +1267,7 @@ p {
   padding: 40px;
 }
 
-.blog-post__title {
+.blog-article__title {
   margin-bottom: 20px;
   font-weight: 600;
   line-height: 35px;
@@ -1220,12 +1275,12 @@ p {
   color: #000000;
 }
 
-.blog-post__title.main {
+.blog-article__title.main {
   margin-bottom: 11px;
   line-height: 41px;
 }
 
-.blog-post__descr {
+.blog-article__descr {
   margin-bottom: 27px;
   font-weight: normal;
   font-size: 14px;
@@ -1233,7 +1288,7 @@ p {
   color: #717171;
 }
 
-.blog-post__data {
+.blog-article__data {
   font-size: 14px;
   line-height: 25px;
   color: #717171;
@@ -1242,7 +1297,7 @@ p {
   border-right: 1px solid #ededed;
 }
 
-.blog-post__view {
+.blog-article__view {
   font-size: 14px;
   line-height: 25px;
   color: #62c0cb;
@@ -1272,6 +1327,7 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 50px;
 }
 
 .pagination .pagination-list__item {
@@ -1287,36 +1343,6 @@ p {
 
 .pagination .icon-slider-arrow {
   font-size: 45px;
-}
-
-.breadcrumb {
-  padding-bottom: 35px;
-  padding-top: 50px;
-}
-
-.breadcrumb .breadcrumb-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.breadcrumb .breadcrumb-list .breadcrumb-list__item {
-  margin-right: 10px;
-}
-
-.breadcrumb .breadcrumb-list .breadcrumb-list__item:not(:last-child) {
-  border-right: 1px solid #ededed;
-}
-
-.breadcrumb .breadcrumb-list .breadcrumb-list__item:last-child .breadcrumb-list__link {
-  color: #383838;
-}
-
-.breadcrumb .breadcrumb-list .breadcrumb-list__item .breadcrumb-list__link {
-  margin-right: 10px;
-  color: #717171;
-  font-size: 14px;
-  line-height: 16.94px;
 }
 
 .contact-form {
@@ -1419,6 +1445,117 @@ p {
   color: #383838;
 }
 
+.detail-post {
+  -webkit-transform: translateY(-7%);
+      -ms-transform: translateY(-7%);
+          transform: translateY(-7%);
+  max-width: 890px;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: -80px;
+  padding: 50px 52px;
+  background-color: #fff;
+}
+
+.detail-post .detail-post__data {
+  font-size: 14px;
+  line-height: 25px;
+  margin-bottom: 21px;
+}
+
+.detail-post .detail-post__main-title {
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: #383838;
+}
+
+.detail-post .detail-post__desrc {
+  margin-bottom: 50px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 30px;
+  color: #383838;
+}
+
+.detail-post .detail-post__title {
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #383838;
+}
+
+.detail-post .detail-post__image {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+.detail-post .detail-post__credit {
+  margin-bottom: 50px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.detail-post .detail-post__credit span {
+  font-style: italic;
+}
+
+.detail-post .detail-post__list {
+  margin-bottom: 50px;
+}
+
+.detail-post .detail-post__list.first-list {
+  padding-left: 20px;
+}
+
+.detail-post .detail-post__list.first-list li {
+  list-style: disc;
+}
+
+.detail-post .detail-post__list.second-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.detail-post .detail-post__list.second-list li span {
+  font-size: 20px;
+  color: #62c0cb;
+  display: inline-block;
+  margin-right: 13px;
+}
+
+.detail-post .detail-post__list .post-list__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.detail-post .blog-post__quote {
+  padding: 44px 41px;
+  border-radius: 4px;
+}
+
+.detail-post .blog-post__quote svg {
+  margin-bottom: 10.33px;
+}
+
+.detail-post .blog-post__quote .post-quote__title {
+  font-style: italic;
+  margin-bottom: 30px;
+  max-width: 454px;
+}
+
+.post-slider__title {
+  text-align: center;
+  margin-bottom: -80px;
+}
+
 @media (max-width: 1372px) {
   .container {
     max-width: 970px;
@@ -1457,6 +1594,10 @@ p {
 }
 
 @media (max-width: 1110px) {
+  .breadcrumb {
+    padding-top: calc( 35px + 15 * ((100vw - 320px) / 790));
+  }
+
   .footer {
     padding-top: calc( 20px + 80 * ((100vw - 320px) / 790));
   }
@@ -1467,10 +1608,6 @@ p {
 
   .footer .footer-body .footer-main .footer-logo a img {
     width: calc( 140px + 64 * ((100vw - 320px) / 790));
-  }
-
-  .breadcrumb {
-    padding-top: calc( 35px + 15 * ((100vw - 320px) / 790));
   }
 }
 

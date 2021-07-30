@@ -1,6 +1,6 @@
-.blog-post__background {
+.blog-article__background {
     position: relative;
-    .blog-post__main {
+    .blog-article__main {
         position: absolute;
         bottom: 0;
         right: 0;
@@ -11,20 +11,20 @@
     }
 }
 
-.blog-posts {
+.blog-articles {
     margin-top: 57px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
-    .blog-post {
-        .blog-post__video {
+    .blog-article {
+        .blog-article__video {
             .video {
                 max-width: 660px;
                 height: 350px;
             }
         }
         margin-top: 107px;
-        .post {
+        .article {
             transform: translate(7.5%, -30%);
             margin-bottom: -150px;
             left: 50%;
@@ -36,7 +36,7 @@
     }
 }
 
-.blog-post__title {
+.blog-article__title {
     margin-bottom: 20px;
     font-weight: 600;
     line-height: 35px;
@@ -48,7 +48,7 @@
     }
 }
 
-.blog-post__descr {
+.blog-article__descr {
     margin-bottom: 27px;
     font-weight: normal;
     font-size: 14px;
@@ -56,7 +56,7 @@
     color: $graycolor;
 }
 
-.blog-post__data {
+.blog-article__data {
     font-size: 14px;
     line-height: 25px;
     color: $graycolor;
@@ -65,7 +65,7 @@
     border-right: 1px solid $linecolor;
 }
 
-.blog-post__view {
+.blog-article__view {
     font-size: 14px;
     line-height: 25px;
     color: $accentcolor;
@@ -81,6 +81,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 0 50px;
     }
     .pagination-list__item {
         border-bottom: 1px solid $linecolor;
