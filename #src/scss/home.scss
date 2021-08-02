@@ -70,6 +70,23 @@
     }
 }
 
+.slider-dots {
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        opacity: 1;
+        background-color: #dddddd;
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background-color: $maincolor;
+        width: 12px;
+        height: 12px;
+    }
+}
+
 .page__category-slider {
     @include adaptiv-value('margin-bottom', 90, 50, 1);
     .category-slider__body {
@@ -307,7 +324,6 @@
 //     .about-section__body {
 //     }
 // }
-
 .transport {
     margin-bottom: 50px;
     &-body {
