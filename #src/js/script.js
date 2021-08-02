@@ -68,3 +68,19 @@ if (document.querySelector('.mobile-header')) {
         }
     });
 }
+
+
+const filterMenu = document.querySelector('.filter-menu');
+
+if(filterMenu){
+    const sidebarToggler = document.querySelector('.sidebar-toggler');
+    const sidebarClose = filterMenu.querySelector('#close-filter');
+    sidebarToggler.addEventListener('click', () =>{
+        filterMenu.classList.add('active');
+        document.body.classList.add('lock')
+    })
+    sidebarClose.addEventListener('click', () =>{
+        filterMenu.classList.remove('active')
+        document.body.classList.remove('lock');
+    })
+}

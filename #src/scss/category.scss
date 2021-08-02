@@ -56,8 +56,10 @@
 
         .products {
             .category-banner {
-                margin-top: 150px;
                 grid-column: 3 span;
+                @media (max-width: $md1+px) {
+                    grid-column: 2 span;
+                }
             }
         }
 
