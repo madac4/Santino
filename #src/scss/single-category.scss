@@ -1,0 +1,139 @@
+.page-grid {
+    padding-top: 35px;
+    &.single-category {
+        padding-top: 25px;
+    }
+    @include adaptiv-value('margin-bottom', 150, 50, 1);
+    .page-grid__content {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        grid-gap: 45px;
+        .sidebar,
+        .filter-menu {
+            &__title {
+                margin-bottom: 80px;
+                font-weight: 500;
+                font-family: 'Inter', sans-serif;
+            }
+            form.filter-form {
+                .filter-form__row {
+                    padding-top: 15px;
+                    &:not(:last-child) {
+                        border-bottom: 1px solid $linecolor;
+                        padding-bottom: 20px;
+                    }
+                    h4 {
+                        font-weight: normal;
+                        margin-bottom: 20px;
+                    }
+                    .show-more {
+                        font-size: 14px;
+                        color: $accentcolor;
+                        margin-top: 5px;
+                    }
+                    .filter-form__slider {
+                        margin-bottom: 25px;
+                    }
+                    .noUi-target {
+                        background-color: #d7d7d7;
+                        border: none;
+                        border-radius: 100px;
+                        box-shadow: none;
+                        height: 2px;
+                    }
+                    .noUi-handle::after,
+                    .noUi-handle::before {
+                        display: none;
+                    }
+                    .noUi-handle {
+                        box-shadow: none;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        border: 1px solid #d7d7d7;
+                        top: -9px;
+                        background-color: #fff;
+                        cursor: grab;
+                        &.noUi-handle-upper {
+                            right: -5px;
+                        }
+                    }
+                    .noUi-connect {
+                        background-color: $accentcolor;
+                    }
+
+                    .filter-form__inputs {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 50px;
+                        .filters-price__input::-webkit-outer-spin-button,
+                        .filters-price__input::-webkit-inner-spin-button {
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }
+                        .filters-price__input[type='number'] {
+                            -moz-appearance: textfield;
+                        }
+                    }
+                }
+            }
+        }
+
+        .page-grid__products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 30px;
+            .products-sort {
+                grid-column: 3 span;
+                &__sort {
+                    margin-bottom: 30px;
+                    display: flex;
+                    align-items: center;
+                    gap: 25px;
+                    font-size: 14px;
+
+                    span {
+                        margin-right: -10px;
+                        color: $graycolor;
+                    }
+                    a {
+                        transition: color 0.3s;
+                        &:hover {
+                            color: $accentcolor;
+                        }
+                    }
+                }
+                &__category {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    .category-btn {
+                        font-family: 'Inter';
+                        font-size: 12px;
+                        color: #717171;
+                        padding: 4px 14px;
+                        display: flex;
+                        align-items: center;
+                        border: 1px solid #ededed;
+                        border-radius: 100px;
+                        span {
+                            display: block;
+                            margin-left: 10px;
+                            font-size: 20px;
+                        }
+                    }
+                    .reset {
+                        font-family: 'Inter';
+                        font-weight: 500;
+                        font-size: 14px;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .products-sort.mobile {
+                display: none;
+            }
+        }
+    }
+}
