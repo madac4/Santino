@@ -1335,6 +1335,24 @@ p {
   opacity: 0.7;
 }
 
+.desktop-header .under-header .under-header__container .login-link {
+  margin-right: 20px;
+  padding-right: 15px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.desktop-header .under-header .under-header__container .login-link a {
+  font-size: 14px;
+  color: #ffffff;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.desktop-header .under-header .under-header__container .login-link a:hover {
+  color: #62c0cb;
+}
+
 .desktop-header .under-header .under-header__container .languages .current-language {
   cursor: pointer;
   color: #fff;
@@ -3870,88 +3888,6 @@ p {
     cursor: pointer;
   }
 
-  .page-grid .page-grid__content .filter-menu form.filter-form .filter-form__row {
-    padding-top: 15px;
-  }
-
-  .page-grid .page-grid__content .filter-menu form.filter-form .filter-form__row:not(:last-child) {
-    border-bottom: 1px solid #ededed;
-    padding-bottom: 20px;
-  }
-
-  .page-grid .page-grid__content .filter-menu form.filter-form .filter-form__row h4 {
-    font-weight: normal;
-    margin-bottom: 20px;
-  }
-
-  .page-grid .page-grid__content .filter-menu form.filter-form .filter-form__row .show-more {
-    font-size: 14px;
-    color: #62c0cb;
-    margin-top: 5px;
-  }
-
-  .page-grid .page-grid__content .filter-menu form.filter-form .filter-form__row .filter-form__slider {
-    margin-bottom: 25px;
-  }
-
-  .page-grid .page-grid__content .filter-menu form.filter-form .filter-form__row .noUi-target {
-    background-color: #d7d7d7;
-    border: none;
-    border-radius: 100px;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    height: 2px;
-  }
-
-  .page-grid .page-grid__content .filter-menu form.filter-form .filter-form__row .noUi-handle::after,
-  .page-grid .page-grid__content .filter-menu form.filter-form .filter-form__row .noUi-handle::before {
-    display: none;
-  }
-
-  .page-grid .page-grid__content .filter-menu form.filter-form .filter-form__row .noUi-handle {
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 1px solid #d7d7d7;
-    top: -9px;
-    background-color: #fff;
-    cursor: -webkit-grab;
-    cursor: grab;
-  }
-
-  .page-grid .page-grid__content .filter-menu form.filter-form .filter-form__row .noUi-handle.noUi-handle-upper {
-    right: -5px;
-  }
-
-  .page-grid .page-grid__content .filter-menu form.filter-form .filter-form__row .noUi-connect {
-    background-color: #62c0cb;
-  }
-
-  .page-grid .page-grid__content .filter-menu form.filter-form .filter-form__row .filter-form__inputs {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    gap: 50px;
-  }
-
-  .page-grid .page-grid__content .filter-menu form.filter-form .filter-form__row .filter-form__inputs .filters-price__input::-webkit-outer-spin-button,
-  .page-grid .page-grid__content .filter-menu form.filter-form .filter-form__row .filter-form__inputs .filters-price__input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-
-  .page-grid .page-grid__content .filter-menu form.filter-form .filter-form__row .filter-form__inputs .filters-price__input[type='number'] {
-    -moz-appearance: textfield;
-  }
-
   .page-grid .page-grid__content .category {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -4184,20 +4120,9 @@ p {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .page-grid .page-grid__content .page-grid__products {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .page-grid .page-grid__content .page-grid__products .products-sort.desktop {
-    display: none;
-  }
-
-  .page-grid .page-grid__content .page-grid__products .products-sort.mobile {
-    grid-column: 1 span;
-  }
-
-  .page-grid .page-grid__content .page-grid__products .products-sort.mobile .toggler {
-    padding: 13px 15px;
+  .page-grid .page-grid__content .filter-menu {
+    width: 85%;
+    right: -85%;
   }
 
   .pagination {

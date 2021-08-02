@@ -743,69 +743,6 @@
                         cursor: pointer;
                     }
                 }
-                form.filter-form {
-                    .filter-form__row {
-                        padding-top: 15px;
-                        &:not(:last-child) {
-                            border-bottom: 1px solid $linecolor;
-                            padding-bottom: 20px;
-                        }
-                        h4 {
-                            font-weight: normal;
-                            margin-bottom: 20px;
-                        }
-                        .show-more {
-                            font-size: 14px;
-                            color: $accentcolor;
-                            margin-top: 5px;
-                        }
-                        .filter-form__slider {
-                            margin-bottom: 25px;
-                        }
-                        .noUi-target {
-                            background-color: #d7d7d7;
-                            border: none;
-                            border-radius: 100px;
-                            box-shadow: none;
-                            height: 2px;
-                        }
-                        .noUi-handle::after,
-                        .noUi-handle::before {
-                            display: none;
-                        }
-                        .noUi-handle {
-                            box-shadow: none;
-                            width: 20px;
-                            height: 20px;
-                            border-radius: 50%;
-                            border: 1px solid #d7d7d7;
-                            top: -9px;
-                            background-color: #fff;
-                            cursor: grab;
-                            &.noUi-handle-upper {
-                                right: -5px;
-                            }
-                        }
-                        .noUi-connect {
-                            background-color: $accentcolor;
-                        }
-
-                        .filter-form__inputs {
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-between;
-                            gap: 50px;
-                            .filters-price__input::-webkit-outer-spin-button,
-                            .filters-price__input::-webkit-inner-spin-button {
-                                -webkit-appearance: none;
-                                margin: 0;
-                            }
-                            .filters-price__input[type='number'] {
-                                -moz-appearance: textfield;
-                            }
-                        }
-                    }
-                }
             }
 
             .category {
@@ -854,10 +791,6 @@
                     }
                     .products-sort__sidebar {
                         width: 100%;
-                        button {
-                            span {
-                            }
-                        }
                     }
                     .products-sort__category {
                         margin-top: 20px;
@@ -1019,17 +952,9 @@
 
     .page-grid {
         .page-grid__content {
-            .page-grid__products {
-                grid-template-columns: repeat(1, 1fr);
-                .products-sort.desktop {
-                    display: none;
-                }
-                .products-sort.mobile {
-                    grid-column: 1 span;
-                    .toggler {
-                        padding: 13px 15px;
-                    }
-                }
+            .filter-menu {
+                width: 85%;
+                right: -85%;
             }
         }
     }
