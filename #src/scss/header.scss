@@ -67,10 +67,16 @@
             }
         }
         .header-cart {
+            position: relative;
             .cart-button {
                 font-size: 24px;
                 position: relative;
+                z-index: 6;
                 cursor: pointer;
+                &:hover + .header-cart__content {
+                    opacity: 1;
+                    visibility: visible;
+                }
                 .header-cart__count {
                     position: absolute;
                     font-size: 11px;
@@ -81,6 +87,118 @@
                     border-radius: 50%;
                     top: -6px;
                     right: -6px;
+                }
+            }
+            .header-cart__content {
+                position: absolute;
+                background-color: #fff;
+                box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.07);
+                border-radius: 4px;
+                z-index: 5;
+                width: 420px;
+                right: -25px;
+                top: -20px;
+                padding-bottom: 20px;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s, visibility 0.3s;
+                &:hover {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                .cart-content_header {
+                    padding-top: 15px;
+                    padding-left: 20px;
+                    padding-bottom: 17px;
+                    border-bottom: 1px solid $linecolor;
+                }
+                .cart-content__list {
+                    margin-bottom: 20px;
+                    max-height: 235px;
+                    overflow: auto;
+                    .cart-item {
+                        padding: 20px;
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+                        border-bottom: 1px solid $linecolor;
+                        &__image {
+                            width: 70px;
+                            height: 70px;
+                        }
+                        &__info {
+                            .cart-item__name {
+                                font-weight: 500;
+                                font-size: 12px;
+                                transition: color 0.3s;
+                                &:hover {
+                                    color: $accentcolor;
+                                }
+                            }
+                            .cart-item__meta {
+                                display: flex;
+                                align-items: center;
+                                .cart-item__price {
+                                    flex: 1;
+                                    font-size: 12px;
+                                    span {
+                                        text-decoration: line-through;
+                                    }
+                                    b {
+                                        font-weight: 600;
+                                        font-size: 14px;
+                                        color: $maincolor;
+                                        &.discount {
+                                            color: $orangecolor;
+                                        }
+                                    }
+                                }
+                                .cart-item__quantity {
+                                    font-size: 12px;
+                                    color: #878787;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .cart-price {
+                    padding: 0 20px;
+                    margin-bottom: 20px;
+                    &__item {
+                        display: flex;
+                        align-items: center;
+                        p {
+                            flex: 1;
+                            font-size: 14px;
+                        }
+                        b {
+                            font-size: 14px;
+                            font-weight: 500;
+                            &.orange {
+                                color: $orangecolor;
+                            }
+                        }
+                    }
+                }
+                .cart-content__navigation {
+                    padding: 0 20px;
+                    .accent-btn {
+                        padding: 13px 0;
+                        font-size: 14px;
+                        margin-bottom: 15px;
+                    }
+                    .outline-btn {
+                        width: 100%;
+                        display: block;
+                        background-color: transparent;
+                        border: 1px solid $accentcolor;
+                        padding: 13px 0;
+                        font-size: 14px;
+                        color: $accentcolor;
+                        text-align: center;
+                        border-radius: 100px;
+                    }
                 }
             }
         }
