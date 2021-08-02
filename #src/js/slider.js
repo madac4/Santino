@@ -1,13 +1,13 @@
 let sliders = document.querySelectorAll('.swiper');
-if(sliders){
+if (sliders) {
     for (let index = 0; index < sliders.length; index++) {
         let slider = sliders[index];
-        if(!slider.classList.contains('swiper-bild')){
+        if (!slider.classList.contains('swiper-bild')) {
             let slider_items = slider.children;
-            if(slider_items){
+            if (slider_items) {
                 for (let index = 0; index < slider_items.length; index++) {
                     let el = slider_items[index];
-                    el.classList.add('swiper-slide');                 
+                    el.classList.add('swiper-slide');
                 }
             }
             let slider_content = slider.innerHTML;
@@ -18,13 +18,13 @@ if(sliders){
             slider.appendChild(slider_wrapper);
             slider.classList.add('swiper-bild');
 
-            if(slider.classList.contains('swiper_scroll')){
+            if (slider.classList.contains('swiper_scroll')) {
                 let sliderScroll = document.createElement('div');
                 sliderScroll.classList.add('swiper-scrollbar');
                 slider.appendChild(sliderScroll);
             }
         }
-        if(slider.classList.contains('gallery')){
+        if (slider.classList.contains('gallery')) {
             // slider.data('lightGallery').destroy(true);
         }
     }
@@ -34,7 +34,7 @@ if(sliders){
 function sliders_bild_callback(params) {}
 
 let sliderScollItems = document.querySelectorAll('.swiper-scroll');
-if(sliderScollItems.length > 0){
+if (sliderScollItems.length > 0) {
     for (let index = 0; index < sliderScollItems.length; index++) {
         const sliderScrollItem = sliderScollItems[index];
         const sliderScrollBar = sliderScrollItem.querySelector('.swiper-scrollbar');
@@ -44,7 +44,7 @@ if(sliderScollItems.length > 0){
             direction: 'vertical',
             slidesPerView: 'auto',
             freeMode: true,
-            scrollbar:{
+            scrollbar: {
                 el: sliderScrollBar,
                 draggable: true,
                 snapOnRelease: false,
@@ -60,7 +60,7 @@ if(sliderScollItems.length > 0){
 
 function sliders_bild_callback(params) {}
 
-if(document.querySelector('.slider-main__body')){
+if (document.querySelector('.slider-main__body')) {
     new Swiper('.slider-main__body', {
         effect: 'fade',
         observer: true,
@@ -75,19 +75,19 @@ if(document.querySelector('.slider-main__body')){
             el: '.slider-main-controls__dots',
             clickable: true,
         },
-        navigation:{
+        navigation: {
             nextEl: '.slider-main-controls__arrows .slider-arrow__next',
             // prevEl: '.slider-main-controls__arrows .slider-arrow__prev',
         },
-        autoplay:{
+        autoplay: {
             delay: 3000,
             disableOnInteraction: false,
         },
-        
+
     })
 }
 
-if(document.querySelector('.slider-category__body')){
+if (document.querySelector('.slider-category__body')) {
     new Swiper('.slider-category__body', {
         observer: true,
         observeParents: true,
@@ -95,11 +95,11 @@ if(document.querySelector('.slider-category__body')){
         speed: 800,
         loop: true,
         preloadImages: false,
-        navigation:{
+        navigation: {
             nextEl: '.slider-category-controls__arrows .slider-arrow__next',
             prevEl: '.slider-category-controls__arrows .slider-arrow__prev',
         },
-        autoplay:{
+        autoplay: {
             delay: 4000,
             disableOnInteraction: false,
         },
@@ -121,6 +121,35 @@ if(document.querySelector('.slider-category__body')){
             },
             992: {
                 slidesPerView: 6,
+            },
+        },
+    })
+}
+
+if (document.querySelector('.slider-post__body')) {
+    new Swiper('.slider-post__body', {
+        observer: true,
+        observeParents: true,
+        watchOverflow: true,
+        speed: 800,
+        loop: true,
+        preloadImages: false,
+        navigation: {
+            nextEl: '.slider-post-controls__arrows .slider-arrow__next',
+            prevEl: '.slider-post-controls__arrows .slider-arrow__prev',
+        },
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                centeredSlides: true,
+                spaceBetween: 0,
+            },
+            767: {
+                slidesPerView: 2,
             },
         },
     })

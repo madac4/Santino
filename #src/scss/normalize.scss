@@ -14,7 +14,7 @@ $blackcolor: #000000;
 // CONTAINER
 $minwidth: 320px;
 $mw: 1360;
-$md1: $mw + 12;
+$md1: $mw+12;
 $md2: 992.98;
 $md3: 767.98;
 $md4: 479.98;
@@ -38,6 +38,7 @@ body {
         overflow: hidden;
     }
 }
+
 .wrapper {
     width: 100%;
     min-height: 100%;
