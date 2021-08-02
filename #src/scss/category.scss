@@ -1,11 +1,19 @@
 .page-grid {
     padding-top: 35px;
+    &.single-category {
+        padding-top: 25px;
+    }
     @include adaptiv-value('margin-bottom', 150, 50, 1);
     .page-grid__content {
         display: grid;
         grid-template-columns: 300px 1fr;
         grid-gap: 45px;
         .sidebar {
+            &__title {
+                margin-bottom: 80px;
+                font-weight: 500;
+                font-family: 'Inter', sans-serif;
+            }
             &-row {
                 width: 100%;
                 padding-bottom: 20px;
@@ -43,6 +51,13 @@
                         }
                     }
                 }
+            }
+        }
+
+        .products {
+            .category-banner {
+                margin-top: 150px;
+                grid-column: 3 span;
             }
         }
 

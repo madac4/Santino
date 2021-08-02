@@ -1,5 +1,6 @@
 @@include('video-hover.js');
 @@include('slider.js');
+@@include('rangeSlider.js');
 
 if (document.querySelector('.header-category__select')) {
     const categorySelect = document.querySelector('.header-category__select');
