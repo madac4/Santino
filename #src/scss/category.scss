@@ -1,0 +1,140 @@
+.page-grid {
+    padding-top: 35px;
+    @include adaptiv-value('margin-bottom', 150, 50, 1);
+    .page-grid__content {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        grid-gap: 45px;
+        .sidebar {
+            &-row {
+                width: 100%;
+                padding-bottom: 20px;
+                &:not(:last-child) {
+                    border-bottom: 1px solid $linecolor;
+                    margin-bottom: 15px;
+                }
+                &__title {
+                    font-weight: 400;
+                    font-family: 'Inter';
+                    margin-bottom: 20px;
+                }
+                &__list {
+                    .sidebar-list__item {
+                        &:not(:last-child) {
+                            margin-bottom: 13px;
+                        }
+                        .sidebar-list__link {
+                            font-size: 14px;
+                            display: flex;
+                            align-items: center;
+                            transition: color 0.3s;
+                            &:hover {
+                                color: $accentcolor;
+                                span {
+                                    color: $accentcolor;
+                                }
+                            }
+                            span {
+                                transition: color 0.3s;
+                                display: block;
+                                margin-right: 10px;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .category {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 60px 20px;
+            padding-top: 40px;
+            &-item {
+                background: #ffffff;
+                box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.07);
+                border-radius: 4px;
+                width: 100%;
+                text-align: center;
+                padding-bottom: 23px;
+                &:hover {
+                    .category-item__name {
+                        color: $accentcolor;
+                    }
+                }
+                &__image {
+                    width: 166px;
+                    height: 166px;
+                    transform: translateY(-30px);
+                    margin-bottom: -30px;
+                }
+                &__name {
+                    transition: color 0.3s;
+                    font-weight: normal;
+                }
+            }
+            &-banner {
+                grid-column: 4 span;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background: #c9e9ea;
+                border-radius: 4px;
+                padding: 0 45px;
+                height: 65%;
+                margin-top: 80px;
+                &__left {
+                    small {
+                        font-weight: 500;
+                        font-size: 14px;
+                        color: #1a7984;
+                    }
+                    h1 {
+                        margin: 15px 0;
+                        span {
+                            color: #1a7984;
+                        }
+                    }
+                    p {
+                    }
+                }
+                img {
+                    transform: translateY(-20px);
+                    margin-bottom: -20px;
+                }
+                &__right {
+                    h3 {
+                        font-weight: 500;
+                        margin-bottom: 23px;
+                    }
+                    small {
+                        font-size: 14px;
+                    }
+                    b {
+                        font-weight: 600;
+                        font-size: 35px;
+                        display: block;
+                        margin-bottom: 25px;
+                        span {
+                            color: $orangecolor;
+                        }
+                    }
+                    a {
+                        display: block;
+                        width: 200px;
+                        font-size: 14px;
+                        border: 1px solid #383838;
+                        border-radius: 100px;
+                        text-align: center;
+                        padding: 14px 0;
+                        transition: transform 0.3s;
+                        &:hover {
+                            transform: scale(1.06);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

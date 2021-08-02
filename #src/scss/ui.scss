@@ -73,6 +73,10 @@ h3 {
     font-size: 24px;
     line-height: 33px;
 }
+h4 {
+    font-size: 18px;
+    line-height: 22px;
+}
 
 p {
     font-weight: 300;
@@ -119,6 +123,7 @@ p {
 .breadcrumb {
     padding-bottom: 35px;
     @include adaptiv-value('padding-top', 50, 35, 1);
+    border-bottom: 1px solid $linecolor;
     .breadcrumb-list {
         display: flex;
         .breadcrumb-list__item {
