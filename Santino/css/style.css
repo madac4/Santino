@@ -3196,34 +3196,158 @@ p {
   margin: 35px 0 90px 0;
 }
 
-.cart .cart-body {
+.cart .cart-grid {
   display: grid;
+  grid-template-columns: 1fr 315px;
+  grid-gap: 56px;
 }
 
-.cart .cart-body .cart-product {
+.cart .cart-grid .cart-body .cart-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 
-.cart .cart-body .cart-product .cart-product__lables {
+.cart .cart-grid .cart-body .cart-product:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.cart .cart-grid .cart-body .cart-product .cart-product__lables {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.cart .cart-body .cart-product .cart-product__lables .product-label__sale {
+.cart .cart-grid .cart-body .cart-product .cart-product__lables .product-lable {
   display: block;
+  text-align: center;
   font-size: 12px;
   line-height: 15px;
   color: #ffffff;
   padding: 5px 10px;
   width: 46px;
-  background-color: #df804c;
   border-radius: 100px;
 }
 
-.cart .cart-body .cart-product .cart-product__image img {
+.cart .cart-grid .cart-body .cart-product .cart-product__lables .product-lable:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.cart .cart-grid .cart-body .cart-product .cart-product__lables .product-label__sale {
+  background-color: #df804c;
+}
+
+.cart .cart-grid .cart-body .cart-product .cart-product__lables .product-label__hit {
+  background-color: #dbdc00;
+}
+
+.cart .cart-grid .cart-body .cart-product .cart-product__image img {
   width: 150px;
   height: 150px;
+}
+
+.cart .cart-grid .cart-body .cart-product .cart-product__title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.cart .cart-grid .cart-body .cart-product .cart-product__title .cart-product__name {
+  display: block;
+  line-height: 30px;
+  font-weight: 500;
+  font-size: 18px;
+  max-width: 374px;
+}
+
+.cart .cart-grid .cart-body .cart-product .cart-product__title .cart-product__category {
+  margin-top: 14px;
+}
+
+.cart .cart-grid .cart-body .cart-product .cart-product__title .cart-product__category .product-category__link {
+  font-size: 14px;
+  line-height: 19px;
+  color: #717171;
+}
+
+.cart .cart-grid .cart-body .cart-product .cart-product__title .cart-product__category .product-category__link:not(:last-child) {
+  padding-right: 10px;
+  margin-right: 10px;
+  border-right: 1px solid #ededed;
+}
+
+.cart .cart-grid .cart-body .cart-product .cart-product__count {
+  border: 1px solid #ededed;
+  border-radius: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 140px;
+  height: 45px;
+  margin-right: 75px;
+}
+
+.cart .cart-grid .cart-body .cart-product .cart-product__count .count {
+  padding: 0 32px;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.cart .cart-grid .cart-body .cart-product .cart-product__count button {
+  color: #717171;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.cart .cart-grid .cart-body .cart-product .cart-product__price {
+  text-align: right;
+  margin-right: 50px;
+}
+
+.cart .cart-grid .cart-body .cart-product .cart-product__price .discount {
+  color: #df804c;
+  font-size: 18px;
+}
+
+.cart .cart-grid .cart-body .cart-product .cart-product__price p {
+  font-size: 16px;
+  color: #717171;
+}
+
+.cart .cart-grid .cart-body .cart-product .cart-product__price p span {
+  text-decoration: line-through;
+}
+
+.cart .cart-grid .cart-body .cart-product .cart-product__price p b {
+  color: #383838;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.cart .cart-grid .cart-body .cart-product .cart-product__trash {
+  font-size: 24px;
+  color: #717171;
+}
+
+.cart .cart-sidebar {
+  -webkit-box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.07);
+}
+
+.cart .cart-sidebar h4 {
+  border-bottom: 1px solid #ededed;
+  padding: 15px 20px;
 }
 
 @media (min-width: 320px) {
