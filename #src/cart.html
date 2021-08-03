@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Santino - Cart</title>
+</head>
+
+<body>
+    @@include('components/_header.html')
+
+
+    <main class="cart">
+        <div class="container">
+            <a href="#" class="back-button"><span class="icon-chevron left"></span>Back</a>
+            <h3>My Cart</h3>
+
+            <div class="cart-body">
+                <div class="cart-product">
+                    <div class="cart-product__lables">
+                        <span class="product-label__sale">
+                            -15%
+                        </span>
+                    </div>
+                    <a class="cart-product__image" href="#">
+                        <img src="img/product1.png" alt="product">
+                    </a>
+                    <div class="cart-product__descr">
+                        <h5>
+                            Santino Self-Watering Hanging Basket VISTA - Anthracite/Anthracite, 8.5 inch
+                        </h5>
+                        <div class="cart-product__couter">
+                            <button class="product-couter__remove">-</button>
+                            <span class="product-couter__count">1</span>
+                            <button class="product-couter__add">+</button>
+                        </div>
+                        <div class="cart-product__price">
+                            <span class="product-price__sale"></span>
+                            <p class="product__price">
+                                de la 150LEI
+                            </p>
+                        </div>
+                        <button class="cart-product__trash">
+                            <span class="icon-bin"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js "></script>
+    <script src="js/script.js "></script>
+</body>
+
+</html>

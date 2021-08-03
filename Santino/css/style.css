@@ -2800,6 +2800,61 @@ p {
   display: none;
 }
 
+.cart .back-button {
+  display: block;
+  margin-top: 50px;
+  padding-bottom: 17px;
+  font-size: 14px;
+  line-height: 19px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #717171;
+  border-bottom: 1px solid #ededed;
+}
+
+.cart .back-button span {
+  padding-left: 5px;
+}
+
+.cart h3 {
+  font-weight: 600;
+  margin: 35px 0 90px 0;
+}
+
+.cart .cart-body {
+  display: grid;
+}
+
+.cart .cart-body .cart-product {
+  position: relative;
+}
+
+.cart .cart-body .cart-product .cart-product__lables {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cart .cart-body .cart-product .cart-product__lables .product-label__sale {
+  display: block;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
+  padding: 5px 10px;
+  width: 46px;
+  background-color: #DF804C;
+  border-radius: 100px;
+}
+
+.cart .cart-body .cart-product .cart-product__image img {
+  width: 150px;
+  height: 150px;
+}
+
 @media (min-width: 320px) {
   .page__category-slider .category-slider__body .category-slider__slider .slider-category__body .slider-category__slide a {
     padding: 0;
