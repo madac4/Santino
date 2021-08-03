@@ -1,4 +1,5 @@
-input {
+input,
+.select {
     border: 1px solid #ededed;
     border-radius: 100px;
     padding: 15px 20px;
@@ -140,7 +141,7 @@ p {
                 color: $maincolor;
                 margin-right: 10px;
                 font-size: 14px;
-                line-height: 16.94px;
+                line-height: 16;
                 @media (max-width: $md4+px) {
                     font-size: 13px;
                 }
@@ -164,6 +165,9 @@ p {
     position: relative;
     padding: 0 20px;
     padding-bottom: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     @media (max-width: $md1+px) {
         padding: 0 10px;
         padding-bottom: 20px;
@@ -284,6 +288,7 @@ p {
     }
     &-info {
         display: block;
+        flex: 1;
         margin-bottom: 30px;
         transition: color 0.3s;
     }
@@ -390,7 +395,7 @@ p {
             z-index: -1;
             width: 1em;
             height: 1em;
-            &:checked+.checkbox__control .icon-check {
+            &:checked + .checkbox__control .icon-check {
                 opacity: 1;
                 visibility: visible;
             }
@@ -419,5 +424,105 @@ p {
     .count {
         font-size: 10px;
         color: $graycolor;
+    }
+}
+
+.product-slider {
+    @include adaptiv-value('margin-bottom', 150, 50, 1);
+    .product-slider__title {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .product-slider__body {
+        .product-slider__slider {
+            position: relative;
+            .slider-product__body {
+                overflow-x: hidden;
+                padding: 30px 0;
+                display: grid;
+                .slider-product__slide {
+                    .product {
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        @media (min-width: 320px) {
+                            max-width: 95%;
+                            margin: 0 auto;
+                        }
+                        @media (min-width: 390px) {
+                            max-width: 80%;
+                        }
+                        @media (min-width: 480px) {
+                            max-width: 100%;
+                            margin: 0;
+                        }
+                        &-meta {
+                            &__price {
+                                font-size: 14px;
+                                b {
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                        &-info {
+                            flex: 1;
+                        }
+                    }
+                }
+            }
+            .slider-product-controls {
+                .slider-product-controls__dots {
+                    display: none;
+                    @media (max-width: $md3+px) {
+                        display: block;
+                        text-align: center;
+                        margin-top: 15px;
+                    }
+                }
+                .slider-product-controls__arrows {
+                    @media (max-width: $md3+px) {
+                        display: none;
+                    }
+                    .slider-arrow {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        &__prev {
+                            left: 0;
+                            @media (max-width: $md1+px) {
+                                left: -10px;
+                            }
+                        }
+                        &__next {
+                            right: 0;
+                            transform: translateY(-50%) rotate(180deg);
+                            @media (max-width: $md1+px) {
+                                right: -10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.back-breadcrumb {
+    display: block;
+    .container {
+        border-bottom: 1px solid $linecolor;
+    }
+    .back-button {
+        margin-top: 50px;
+        padding-bottom: 17px;
+        font-size: 14px;
+        line-height: 19px;
+        display: inline-flex;
+        align-items: center;
+        color: #717171;
+
+        span {
+            padding-left: 5px;
+        }
     }
 }

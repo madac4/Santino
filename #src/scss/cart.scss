@@ -1,18 +1,4 @@
 .cart {
-    .back-button {
-        display: block;
-        margin-top: 50px;
-        padding-bottom: 17px;
-        font-size: 14px;
-        line-height: 19px;
-        display: flex;
-        align-items: center;
-        color: #717171;
-        border-bottom: 1px solid $linecolor;
-        span {
-            padding-left: 5px;
-        }
-    }
     h3 {
         font-weight: 600;
         margin: 35px 0 90px 0;
@@ -29,10 +15,10 @@
                     display: block;
                     font-size: 12px;
                     line-height: 15px;
-                    color: #FFFFFF;
+                    color: #ffffff;
                     padding: 5px 10px;
                     width: 46px;
-                    background-color: #DF804C;
+                    background-color: #df804c;
                     border-radius: 100px;
                 }
             }

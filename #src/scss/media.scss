@@ -982,17 +982,9 @@
     }
     .page-grid {
         .page-grid__content {
-            .page-grid__products {
-                grid-template-columns: repeat(1, 1fr);
-                .products-sort.desktop {
-                    display: none;
-                }
-                .products-sort.mobile {
-                    grid-column: 1 span;
-                    .toggler {
-                        padding: 13px 15px;
-                    }
-                }
+            .filter-menu {
+                width: 85%;
+                right: -85%;
             }
         }
     }

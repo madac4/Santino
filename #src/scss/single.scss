@@ -84,14 +84,21 @@
         .post-slider__body {
             .post-slider__slider {
                 position: relative;
+                &.container {
+                    padding: 0;
+                }
                 .slider-post__body {
                     overflow: hidden;
+                    &.slider-container {
+                        padding: 0;
+                    }
                 }
                 .slider-post-controls {
                     .slider-post-controls__dots {
                         display: none;
                         @media (max-width: $md3+px) {
                             display: block;
+                            margin-top: 30px;
                         }
                     }
                     .slider-post-controls__arrows {
@@ -105,11 +112,17 @@
                             z-index: 2;
                         }
                         .slider-arrow__prev {
-                            left: -80px;
+                            left: 0;
+                            @media (max-width: $md1+px) {
+                                left: -25px;
+                            }
                         }
                         .slider-arrow__next {
                             transform: translateY(-30%) rotate(180deg);
-                            right: -80px;
+                            right: 0;
+                            @media (max-width: $md1+px) {
+                                right: -25px;
+                            }
                         }
                     }
                 }
