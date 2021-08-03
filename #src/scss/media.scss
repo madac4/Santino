@@ -785,11 +785,6 @@
             }
         }
     }
-    .detail-post {
-        padding: 25px;
-        height: 100%;
-        max-width: 100%;
-    }
     .detail-post__image {
         height: 100%;
         width: 100%;
@@ -1014,13 +1009,8 @@
             max-width: 240px;
         }
     }
-    .detail-post__desrc {
+    p {
         font-size: 14px;
-    }
-    .detail-post {
-        height: 100%;
-        width: 100%;
-        padding: 25px;
     }
     .detail-pos__data {
         margin-bottom: 20px;
