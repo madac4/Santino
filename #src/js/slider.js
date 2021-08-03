@@ -124,6 +124,47 @@ if (document.querySelector('.slider-category__body')) {
     })
 }
 
+if (document.querySelector('.slider-about__body')) {
+    new Swiper('.slider-about__body', {
+        observer: true,
+        observeParents: true,
+        speed: 800,
+        loop: true,
+        spaceBetween: 30,
+        preloadImages: false,
+        pagination: {
+            el: '.slider-about-controls__dots',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.slider-about-controls__arrows .slider-arrow__next',
+            prevEl: '.slider-about-controls__arrows .slider-arrow__prev',
+        },
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 15,
+                centeredSlides: true,
+                freeMode: true,
+            },
+            480: {
+                slidesPerView: 2,
+                spaceBetween: 15,
+                centeredSlides: false
+            },
+            767: {
+                slidesPerView: 2,
+                freeMode: false,
+                spaceBetween: 30,
+            },
+        },
+    })
+}
+
 if (document.querySelector('.slider-post__body')) {
     new Swiper('.slider-post__body', {
         observer: true,
@@ -152,6 +193,51 @@ if (document.querySelector('.slider-post__body')) {
             },
             992: {
                 slidesPerView: 2,
+            },
+        },
+    })
+}
+
+if (document.querySelector('.slider-product__body')) {
+    new Swiper('.slider-product__body', {
+        observer: true,
+        observeParents: true,
+        watchOverflow: true,
+        speed: 800,
+        loop: true,
+                slidesPerView: 4,
+                preloadImages: false,
+        pagination: {
+            el: '.slider-product-controls__dots',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.slider-product-controls__arrows .slider-arrow__next',
+            prevEl: '.slider-product-controls__arrows .slider-arrow__prev',
+        },
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                freeMode: true,
+            },
+            480: {
+                slidesPerView: 2,
+            },
+            992: {
+                slidesPerView: 3,
+                centeredSlides: true,
+                freeMode: false,
+
+            },
+            1360: {
+                slidesPerView: 4,
+                centeredSlides: false,
+
             },
         },
     })
