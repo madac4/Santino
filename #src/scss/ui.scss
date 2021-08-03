@@ -141,7 +141,7 @@ p {
                 color: $maincolor;
                 margin-right: 10px;
                 font-size: 14px;
-                line-height: 16;
+                line-height: 16px;
                 @media (max-width: $md4+px) {
                     font-size: 13px;
                 }
@@ -395,7 +395,7 @@ p {
             z-index: -1;
             width: 1em;
             height: 1em;
-            &:checked+.checkbox__control .icon-check {
+            &:checked + .checkbox__control .icon-check {
                 opacity: 1;
                 visibility: visible;
             }
