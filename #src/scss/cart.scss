@@ -1,0 +1,33 @@
+.cart {
+    h3 {
+        font-weight: 600;
+        margin: 35px 0 90px 0;
+    }
+    .cart-body {
+        display: grid;
+        .cart-product {
+            position: relative;
+            .cart-product__lables {
+                position: absolute;
+                top: 0;
+                left: 0;
+                .product-label__sale {
+                    display: block;
+                    font-size: 12px;
+                    line-height: 15px;
+                    color: #ffffff;
+                    padding: 5px 10px;
+                    width: 46px;
+                    background-color: #df804c;
+                    border-radius: 100px;
+                }
+            }
+            .cart-product__image {
+                img {
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+        }
+    }
+}
