@@ -117,10 +117,43 @@
         }
     }
     .cart-sidebar {
+        height: fit-content;
+        padding-bottom: 30px;
         box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.07);
-        h4 {
+        .cart-sidebar__title {
             border-bottom: 1px solid $linecolor;
             padding: 15px 20px;
+        }
+        .card-sidebar__prices {
+            padding: 30px 20px 0;
+            border-radius: 4px;
+            .price-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                p {
+                    font-size: 14px;
+                    line-height: 19px;
+                    color: #383838;
+                }
+                b {
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #383838;
+                }
+                h4 {
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 22px;
+                    color: #DF804C;
+                }
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+            .chekout-btn {
+                margin-top: 35px;
+            }
         }
     }
 }
