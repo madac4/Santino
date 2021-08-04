@@ -99,6 +99,9 @@
                     }
                     a {
                         transition: color 0.3s;
+                        &.active {
+                            color: $accentcolor;
+                        }
                         &:hover {
                             color: $accentcolor;
                         }

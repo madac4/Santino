@@ -124,11 +124,11 @@ p {
 }
 
 .breadcrumb {
-    padding-bottom: 35px;
     @include adaptiv-value('padding-top', 50, 35, 1);
-    border-bottom: 1px solid $linecolor;
     .breadcrumb-list {
         display: flex;
+        border-bottom: 1px solid $linecolor;
+        padding-bottom: 35px;
         .breadcrumb-list__item {
             margin-right: 10px;
             &:not(:last-child) {
@@ -247,45 +247,8 @@ p {
                 }
             }
         }
-        &__status {
-            padding: 4px 14px;
-            border: 1px solid #1eba9e;
-            border-radius: 100px;
-            color: #1eba9e;
-            @media (max-width: $md1+px) {
-                padding: 4px 8px;
-            }
-            &.out {
-                border: 1px solid #ff5b5b;
-                color: #ff5b5b;
-            }
-        }
     }
-    &-category {
-        margin-bottom: 10px;
-        a {
-            font-size: 14px;
-            color: $graycolor;
-            position: relative;
-            transition: color 0.3s;
-            &:hover {
-                color: $accentcolor;
-            }
-            &:not(:last-child) {
-                margin-right: 20px;
-                &::after {
-                    content: '';
-                    background-color: $linecolor;
-                    width: 1px;
-                    height: 100%;
-                    position: absolute;
-                    right: -50%;
-                    transform: translateX(-50%);
-                    top: 0;
-                }
-            }
-        }
-    }
+
     &-info {
         display: block;
         flex: 1;
@@ -310,6 +273,46 @@ p {
     }
 }
 
+.product-meta__status {
+    display: inline-block;
+    padding: 4px 14px;
+    border: 1px solid #1eba9e;
+    border-radius: 100px;
+    color: #1eba9e;
+    @media (max-width: $md1+px) {
+        padding: 4px 8px;
+    }
+    &.out {
+        border: 1px solid #ff5b5b;
+        color: #ff5b5b;
+    }
+}
+
+.product-category {
+    margin-bottom: 10px;
+    a {
+        font-size: 14px;
+        color: $graycolor;
+        position: relative;
+        transition: color 0.3s;
+        &:hover {
+            color: $accentcolor;
+        }
+        &:not(:last-child) {
+            margin-right: 20px;
+            &::after {
+                content: '';
+                background-color: $linecolor;
+                width: 1px;
+                height: 100%;
+                position: absolute;
+                right: -50%;
+                transform: translateX(-50%);
+                top: 0;
+            }
+        }
+    }
+}
 .product-btn {
     max-width: 113px;
     padding: 13px 0;
@@ -509,11 +512,12 @@ p {
 
 .back-breadcrumb {
     display: block;
-    .container {
+    .back-block {
         border-bottom: 1px solid $linecolor;
     }
     .back-button {
-        margin-top: 50px;
+        padding-top: 50px;
+        @include adaptiv-value('padding-top', 50, 17, 1);
         padding-bottom: 17px;
         font-size: 14px;
         line-height: 19px;
