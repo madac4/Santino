@@ -129,6 +129,9 @@ p {
         display: flex;
         border-bottom: 1px solid $linecolor;
         padding-bottom: 35px;
+        @media (max-width: $md4+px) {
+            overflow: auto;
+        }
         .breadcrumb-list__item {
             margin-right: 10px;
             &:not(:last-child) {
@@ -142,7 +145,22 @@ p {
                 margin-right: 10px;
                 font-size: 14px;
                 line-height: 16px;
+
+                @media (max-width: $md2+px) {
+                    max-width: 450px;
+                    display: block;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                @media (max-width: $md3+px) {
+                    max-width: 350px;
+                }
+                @media (max-width: 640px) {
+                    max-width: 200px;
+                }
                 @media (max-width: $md4+px) {
+                    max-width: 100%;
                     font-size: 13px;
                 }
             }

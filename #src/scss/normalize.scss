@@ -28,6 +28,10 @@ $md4: 479.98;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: $mainfont, sans-serif;
     font-size: $mainsize;

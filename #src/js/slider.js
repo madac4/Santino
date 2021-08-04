@@ -248,32 +248,18 @@ if (document.querySelector('.slider-single__body')) {
         observer: true,
         observeParents: true,
         watchOverflow: true,
+        spaceBetween: 15,        
         speed: 800,
-        spaceBetween: 25,        
         slidesPerView: 4,
-        direction: "vertical",
         preloadImages: false,
-        // breakpoints: {
-        //     320: {
-        //         slidesPerView: 1,
-        //         spaceBetween: 0,
-        //         freeMode: true,
-        //     },
-        //     480: {
-        //         slidesPerView: 2,
-        //     },
-        //     992: {
-        //         slidesPerView: 3,
-        //         centeredSlides: true,
-        //         freeMode: false,
-
-        //     },
-        //     1360: {
-        //         slidesPerView: 4,
-        //         centeredSlides: false,
-
-        //     },
-        // },
+        breakpoints: {
+            480: {
+                spaceBetween: 25,        
+            },
+            992: {
+                direction: "vertical",
+            },
+        },
     })
 
     new Swiper('.slider-single__body', {
@@ -281,11 +267,14 @@ if (document.querySelector('.slider-single__body')) {
         observeParents: true,
         watchOverflow: true,
         speed: 800,
-        direction: "vertical",
         preloadImages: false,
         thumbs: {
             swiper: thumbs,
-          },
-        
+        },
+        breakpoints: {
+            992: {
+                direction: "vertical",
+            },
+        },
     })
 }

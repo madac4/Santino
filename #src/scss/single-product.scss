@@ -3,7 +3,7 @@
     &__container {
         display: flex;
         gap: 135px;
-        padding-bottom: 30px;
+        padding-bottom: 30px !important;
         border-bottom: 1px solid $linecolor;
     }
 
@@ -35,7 +35,13 @@
                 .thumb-slider__slider {
                     .slider-thumb__body {
                         .thumb-slider__slide {
+                            &.swiper-slide-thumb-active {
+                                img {
+                                    border: 1px solid $accentcolor;
+                                }
+                            }
                             img {
+                                border: 1px solid transparent;
                                 width: 85px;
                                 height: 85px;
                             }
@@ -201,6 +207,7 @@
 .single-section {
     &:not(:last-child) {
         margin-bottom: 100px;
+        @include adaptiv-value('margin-bottom', 100, 40, 1);
     }
     &__header {
         display: flex;
