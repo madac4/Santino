@@ -85,3 +85,16 @@ if(filterMenu){
         document.body.classList.remove('lock');
     })
 }
+
+
+const fixedContacts = document.querySelector('.fixed-contact');
+if(fixedContacts){
+    document.addEventListener('scroll', () =>{
+        if(fixedContacts.offsetTop <= window.pageYOffset){
+            fixedContacts.classList.add('fixed')
+        }
+        if(window.pageYOffset <= 1120){
+            fixedContacts.classList.remove('fixed')
+        }
+    })
+}

@@ -138,7 +138,6 @@ if (document.querySelector('.slider-about__body')) {
         observer: true,
         observeParents: true,
         speed: 800,
-        loop: true,
         spaceBetween: 30,
         preloadImages: false,
         pagination: {
@@ -436,5 +435,18 @@ if(filterMenu){
     sidebarClose.addEventListener('click', () =>{
         filterMenu.classList.remove('active')
         document.body.classList.remove('lock');
+    })
+}
+
+
+const fixedContacts = document.querySelector('.fixed-contact');
+if(fixedContacts){
+    document.addEventListener('scroll', () =>{
+        if(fixedContacts.offsetTop <= window.pageYOffset){
+            fixedContacts.classList.add('fixed')
+        }
+        if(window.pageYOffset <= 1120){
+            fixedContacts.classList.remove('fixed')
+        }
     })
 }

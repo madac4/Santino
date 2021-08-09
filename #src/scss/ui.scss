@@ -61,8 +61,8 @@ textarea {
 }
 
 h1 {
-    font-size: 55px;
-    line-height: 70px;
+    @include adaptiv-value('font-size', 55, 44, 1);
+    line-height: 125%;
 }
 
 h2 {

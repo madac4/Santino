@@ -1332,6 +1332,17 @@
                 width: 85%;
                 right: -85%;
             }
+            .page-grid__products {
+                grid-template-columns: repeat(1, 1fr);
+                grid-gap: 50px;
+                .products-sort {
+                    grid-column: 1 span !important;
+                }
+                .product {
+                    max-width: 80%;
+                    margin: 0 auto;
+                }
+            }
         }
     }
 

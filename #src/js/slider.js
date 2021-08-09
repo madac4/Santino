@@ -129,7 +129,6 @@ if (document.querySelector('.slider-about__body')) {
         observer: true,
         observeParents: true,
         speed: 800,
-        loop: true,
         spaceBetween: 30,
         preloadImages: false,
         pagination: {
